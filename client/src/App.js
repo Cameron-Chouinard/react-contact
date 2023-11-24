@@ -7,6 +7,8 @@ import HomePage from './_misc/pages/HomePage';
 import WelcomePage from './_misc/pages/WelcomePage';
 import LoginPage from './auth/pages/LoginPage';
 import NavigationBar from './_misc/components/NavigationBar';
+import ContactListPage from './contacts/pages/ContactListPage';
+import ContactFormEditPage from './contacts/pages/ContactFormEditPage';
 
 /**
  * composant racine de l'application
@@ -21,7 +23,11 @@ function App() {
         <Routes>
           {
             isAuth ? (
-              <Route path='' element={ <WelcomePage/>}/>
+              <>
+                <Route path='' element={ <WelcomePage/>}/>
+                <Route path='contacts' element={ <ContactListPage/>}/>
+                <Route path='contacts/:id' element={ <ContactFormEditPage/>}/>
+              </>
             ) : (
               <>
                 <Route path='' element={ <HomePage/>}/>

@@ -12,13 +12,13 @@ function NavigationBar() {
   return (
     <Navbar bg='dark' variant='dark'>
       <Container>
-        <Navbar.Brand>Application React de Contacts</Navbar.Brand>
+        <Navbar.Brand>Application React de contacts</Navbar.Brand>
         <Nav className='ms-auto'>
           <Nav.Link as={NavLink} to="">Accueil</Nav.Link>
           {
             isAuth ? (
             <>
-              <Nav.Link as={NavLink} to="">Liste de contacts</Nav.Link>
+              <Nav.Link as={NavLink} to="contacts">Liste de contacts</Nav.Link>
               <Nav.Link as={NavLink} to="">Déconnexion</Nav.Link>
             </>
             ) : (
